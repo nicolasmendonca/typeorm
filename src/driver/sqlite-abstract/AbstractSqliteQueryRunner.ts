@@ -2014,7 +2014,7 @@ export abstract class AbstractSqliteQueryRunner
         }temporary_${tableNameNew}`
 
         // create new table
-        upQueries.push(this.createTableSql(newTable, true, true))
+        upQueries.push(this.createTableSql(newTable, true, false))
         downQueries.push(this.dropTableSql(newTable))
 
         // migrate all data from the old table into new table
